@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"paths": {
+			"@components/*": [
+				"client/src/components/*"
+			],
+			"@common/*": [
+				"client/src/common/*"
+			],
+			"@hooks/*": [
+				"client/src/hooks/*"
+			],
+			"@pages/*": [
+				"client/src/pages/*"
+			],
+			"@constants/*": [
+				"client/src/constants/*"
+			],
+			"@src/*": [
+				"client/src/*"
+			],
+			"@server/*":[
+				"server/*"
+			]
+		}
+	}
+}

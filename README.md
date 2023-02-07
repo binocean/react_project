@@ -44,3 +44,46 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+
+## 项目结构
+
+```bash
+.
+├── README.md
+├── public
+└── src
+│   ├── common
+│   ├── components			# 公共组件
+│   ├── constants			# 常量
+│   ├── echarts.d.ts
+│   ├── hooks				# 通用 hooks
+│   ├── index.tsx
+│   ├── pages				# 页面
+│   ├── react-app-env.d.ts	# 全局定义的类型、枚举
+│   ├── style				# 公共样式
+│   └── utils				# 工具函数
+├── .code.yml
+├── .eslintignore				# eslint 忽略范围
+├── .eslintrc.js				# eslint 配置文件，规范团队 ts、tsx 代码风格
+├── .gitignore					# git 忽略范围
+├── .prettierrc					# prettier 配置文件
+├── .stylelintrc.js				# stylelint 配置文件，规范团队 less 代码风格
+├── config-overrides.js			# 覆盖 create-react-app 默认配置
+├── nodemon.json
+├── package-lock.json			# 依赖版本信息
+├── package.json				# 项目基本信息配置
+├── tsconfig.json				# ts 配置入口文件
+└── tsconfig.paths.json
+```
+
+## 路径映射
+
+项目中需要在四个文件中配置路径映射
+
+- [tsconfig.paths.json](https://www.typescriptlang.org/tsconfig#paths): `compilerOptions.paths`, *build 前*
+- jest.config.js: `moduleNameMapper`, *测试时*
+- config-overrides.js: `addWebpackAlias`, *build 后*
+- .eslintrc.js: `settings['import/internal-regex']`, *lint 时*
